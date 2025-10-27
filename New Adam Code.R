@@ -14,10 +14,10 @@ bucket <- "projet-esteem"
 
 install.packages("aws.s3", repos = "https://cloud.R-project.org")
 
-Sys.setenv("AWS_ACCESS_KEY_ID" = "BSC8N2R4VZSDYW9UGNJJ",
-           "AWS_SECRET_ACCESS_KEY" = "G6a+eMqc2T+G4eNEXwg+s1VmKUSvqhSei3qH2R8+",
+Sys.setenv("AWS_ACCESS_KEY_ID" = "TJN2MD6H17WU3FDEGVGO",
+           "AWS_SECRET_ACCESS_KEY" = "4sCLuuwPSQp4WO53yzXyDC6o33EzaRD9QD6xGROs",
            "AWS_DEFAULT_REGION" = "us-east-1",
-           "AWS_SESSION_TOKEN" = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJCU0M4TjJSNFZaU0RZVzlVR05KSiIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sImF1ZCI6WyJtaW5pby1kYXRhbm9kZSIsIm9ueXhpYSIsImFjY291bnQiXSwiYXV0aF90aW1lIjoxNzU5NzQ5OTEyLCJhenAiOiJvbnl4aWEiLCJlbWFpbCI6InRhdXNjaGxAYWZkLmZyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV4cCI6MTc2MDM1NDcxNCwiZmFtaWx5X25hbWUiOiJUYXVzY2giLCJnaXZlbl9uYW1lIjoiTHVjYSIsImdyb3VwcyI6WyJVU0VSX09OWVhJQSIsImVzdGVlbSJdLCJpYXQiOjE3NTk3NDk5MTMsImlzcyI6Imh0dHBzOi8vYXV0aC5sYWIuc3NwY2xvdWQuZnIvYXV0aC9yZWFsbXMvc3NwY2xvdWQiLCJqdGkiOiJvbnJ0cnQ6MzI5YzRkOGMtOTE3MC1lZTljLThlMzAtZTllODFlNjhkYmQwIiwibG9jYWxlIjoiZnIiLCJuYW1lIjoiTHVjYSBUYXVzY2giLCJwb2xpY3kiOiJzdHNvbmx5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGF1c2NoIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLXNzcGNsb3VkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc3NwY2xvdWQiXSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBncm91cHMgZW1haWwiLCJzaWQiOiJmNjBmOWFjOS1lNjJkLTQ2NTgtYjJjMC1hZmFkNTIwNjAzZWMiLCJzdWIiOiIyYTAyNDRkMC1iZWE5LTQwZDgtYTc3My1kNGQ2ZTIwMDNhMGUiLCJ0eXAiOiJCZWFyZXIifQ.v0OilW9Zjb5yK5a1Jc7KeB4ppnEhYRiCNQ8CfPosEf9kIz2svSFc2wJGrLN31zAXHeWU_PZ5LjCCbzgm5l8QNA",
+           "AWS_SESSION_TOKEN" = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJUSk4yTUQ2SDE3V1UzRkRFR1ZHTyIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sImF1ZCI6WyJtaW5pby1kYXRhbm9kZSIsIm9ueXhpYSIsImFjY291bnQiXSwiYXV0aF90aW1lIjoxNzYwNzAzODA1LCJhenAiOiJvbnl4aWEiLCJlbWFpbCI6InNhbnRvc2Nhcm5laXJvZy5leHRAYWZkLmZyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV4cCI6MTc2MjE2Mjk2MiwiZmFtaWx5X25hbWUiOiJTYW50b3MgQ2FybmVpcm8iLCJnaXZlbl9uYW1lIjoiR2FicmllbCIsImdyb3VwcyI6WyJVU0VSX09OWVhJQSIsImVzdGVlbSJdLCJpYXQiOjE3NjE1NTgxNjEsImlzcyI6Imh0dHBzOi8vYXV0aC5sYWIuc3NwY2xvdWQuZnIvYXV0aC9yZWFsbXMvc3NwY2xvdWQiLCJqdGkiOiJvbnJ0cnQ6ZDNjZDU5YmItMzgxNS04YTBkLWM1NDktYzc1MTg1ZjQ4OTYyIiwibG9jYWxlIjoiZnIiLCJuYW1lIjoiR2FicmllbCBTYW50b3MgQ2FybmVpcm8iLCJwb2xpY3kiOiJzdHNvbmx5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2FudG9zY2FybmVpcm9nIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJkZWZhdWx0LXJvbGVzLXNzcGNsb3VkIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtc3NwY2xvdWQiXSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBncm91cHMgZW1haWwiLCJzaWQiOiJkMDk5YWM3ZC0yZmQ2LTRiMTMtOTc1NS01OGJjMWEwNmFkZjciLCJzdWIiOiJlNmMyNjA4MS01MjEwLTRlMTktYWU2MC05YzE1YjgzZmUyNDAiLCJ0eXAiOiJCZWFyZXIifQ.zqb715N-Ijym_2AYEbH4q_pW4GP4MAjc-ep8rF5hAM-qbdSFCuBB4WuX-X3JrJ-R9wCGPieFclQzAD9adRDddw",
            "AWS_S3_ENDPOINT"= "minio.lab.sspcloud.fr")
 
 library("aws.s3")
@@ -388,6 +388,58 @@ Shen30GlobVulCLoss_Country <- data.frame(soma_120 = as.numeric(somas))
 sum(Shen30GlobVulCLoss_Country[high_indices, ])
 sum(Shen30GlobVulCLoss_Country[middle_indices_mod, ])
 sum(Shen30GlobVulCLoss_Country[low_indices_mod, ])
+
+
+
+# Estimating Value-Added --------------------------------------------------
+
+VAagg <- as.numeric(apply(VA, 2, sum))
+VAX <- VAagg/x
+
+# Shen Country SP - Excluded BEL, ETH, and ZWB
+
+VAShen30CountryVulCLoss <- Shen30CountryVulCLoss[, 6]*VAX
+VAShen30CountryVulCLoss_Country <- as.numeric(tapply(X = VAShen30CountryVulCLoss, 
+                                          INDEX = (seq_len(nrow(VAShen30CountryVulCLoss)) - 1) %/% 120, 
+                                          FUN = sum))
+
+sum(VAShen30CountryVulCLoss_Country[high_indices], na.rm = TRUE) + 
+  sum(VAShen30CountryVulCLoss_Country[middle_indices_mod], na.rm = TRUE) + 
+  sum(VAShen30CountryVulCLoss_Country[low_indices_mod], na.rm = TRUE)
+
+# Shen Country VulC - Excluded BEL, ETH, and ZWB
+
+VAShen30CountrySPLoss <- Shen30CountrySPLoss[, 6]*VAX
+VAShen30CountrySPLoss_Country <- as.numeric(tapply(X = VAShen30CountrySPLoss, 
+                                                   INDEX = (seq_len(nrow(VAShen30CountrySPLoss)) - 1) %/% 120, 
+                                                   FUN = sum))
+
+sum(VAShen30CountrySPLoss_Country[high_indices], na.rm = TRUE) + 
+  sum(VAShen30CountrySPLoss_Country[middle_indices_mod], na.rm = TRUE) + 
+  sum(VAShen30CountrySPLoss_Country[low_indices_mod], na.rm = TRUE)
+
+# Shen Global SP - Excluded BEL, ETH, and ZWB
+
+VAShen30GlobalSPLoss <- Shen30GlobSPLoss[, 6]*VAX
+VAShen30GlobalSPLoss_Country <- as.numeric(tapply(X = VAShen30GlobalSPLoss, 
+                                                   INDEX = (seq_len(nrow(VAShen30GlobalSPLoss)) - 1) %/% 120, 
+                                                   FUN = sum))
+
+sum(VAShen30GlobalSPLoss_Country[high_indices], na.rm = TRUE) + 
+  sum(VAShen30GlobalSPLoss_Country[middle_indices_mod], na.rm = TRUE) + 
+  sum(VAShen30GlobalSPLoss_Country[low_indices_mod], na.rm = TRUE)
+
+
+# Shen Global VulC - Excluded BEL, ETH, and ZWB
+
+VAShen30GlobVulCLoss <- Shen30GlobVulCLoss[, 6]*VAX
+VAShen30GlobVulCLoss_Country <- as.numeric(tapply(X = VAShen30GlobVulCLoss, 
+                                                  INDEX = (seq_len(nrow(VAShen30GlobVulCLoss)) - 1) %/% 120, 
+                                                  FUN = sum))
+
+sum(VAShen30GlobVulCLoss_Country[high_indices], na.rm = TRUE) + 
+  sum(VAShen30GlobVulCLoss_Country[middle_indices_mod], na.rm = TRUE) + 
+  sum(VAShen30GlobVulCLoss_Country[low_indices_mod], na.rm = TRUE)
 
 
 
